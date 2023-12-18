@@ -63,31 +63,6 @@ class solution():
         return pointcount, len(matches)
     
     
-#    def reco(self,ptct,matches):
-#        accum = 0
-#        for i in range(len(matches.keys())):
-#            if matches[i+1] > 0:
-#                val = matches[i+1]
-#                while val > 0:
-#                    accum += matches[i+1+val]
-#                    val += -1
-#        return accum
-
-#    def reco(self, matches):
-#        accum = {key: 1 for key in range(1, len(matches.keys()) + 1)}
-#        for i in range(1,len(matches.keys())+1):
-#            print(matches[i])
-#            #accum[i] = 1
-#            if matches[i] > 0:
-#                val = matches[i]
-#                for j in range(1,val):
-#                    if i+j <= len(matches.keys()+1):
-#                        accum[i+j] = (accum[i+j] + 1)*accum[i+j]
-#                        
-#                        #accum[i] += matches.get(i + val, 0)  
-#                       
-#        return accum
-
     def reco(self, matches):
             accum = {key: 1 for key in range(1, len(matches.keys()) + 1)}
             for i in range(1, len(matches.keys()) + 1):
