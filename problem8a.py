@@ -30,6 +30,7 @@ class solution():
         
     def proc_tree(self,tree):
         d = {}
+        regex_pattern = r'.*?\((.*)\).*'
         for t in tree:
             bb = t.split("=")[0].strip()
             bb2 = re.search(regex_pattern, t).group(1).strip().split(", ")
